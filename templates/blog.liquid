@@ -8,7 +8,7 @@
 
 {% for article in blog.articles %}
   <div class="blog-article {% if forloop.last %}no-border{% endif %}">
-    <h3 class="blog-title"><a href="{{ artile.url }}">{{ article.title }}</a></h3>
+    <h3 class="blog-title"><a href="{{ article.url }}">{{ article.title }}</a></h3>
     <div class="blog-data">
       {{ article.published_at | date: '%b %d, %Y' }}
       {% if blog.comments_enabled? %}
