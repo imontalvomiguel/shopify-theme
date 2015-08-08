@@ -27,11 +27,13 @@
       <a href="/">{{ shop.name }}</a>
     </h1>
     <nav class="main-menu">
+      <ul>
       {% for link in linklists.main-menu.links %}
         <li {% if link.active %}class="current"{% endif %}>
           <a href="{{ link.url }}">{{ link.title }}</a>
         </li>
       {% endfor %}
+      </ul>
     </nav>
     <div class="content">
       {{ content_for_layout}}
